@@ -1,31 +1,4 @@
-/* File:     pth_pi_busy1.c
- * Purpose:  Estimate pi using the series
- *
- *              pi = 4*[1 - 1/3 + 1/5 - 1/7 + 1/9 - . . . ]
- *
- *           This version using busy-waiting to control access to
- *           the critical section.
- *
- * Compile:  gcc -g -Wall -o pth_pi_busy1 pth_pi_busy1.c -lm -lpthread
- *           Needs the timer.h header file
- * Run:      pth_pi_busy1 <number of threads> <n>
- *           n is the number of terms of the Maclaurin series to use
- *           n should be evenly divisible by the number of threads
- *
- * Input:    none
- * Output:   Estimate of pi as computed by multiple threads, estimate
- *           as computed by one threads, and 4*arctan(1).
- *           This version also prints the elapsed time required for
- *           the multi-threaded and single-threaded calculations.
- *
- * Notes:
- *    1.  The radius of convergence for the series is only 1.  So the
- *        series converges quite slowly.
- *    2.  This version is likely to become buggy with compiler optimization
- *        turned on.
- *
- * IPP:   Section 4.5 (pp. 165 and ff.)
- */
+
 
 #include <stdio.h>
 #include <stdlib.h>
