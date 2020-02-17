@@ -1,28 +1,4 @@
-/* File:     pth_pi_mutex.c
- * Purpose:  Estimate pi using series
- *
- *              pi = 4*[1 - 1/3 + 1/5 - 1/7 + 1/9 - . . . ]
- *
- *           This version uses a mutex to protect the critical section
- *
- * Compile:  gcc -g -Wall -o pth_pi_mutex pth_pi_mutex.c -lm -lpthread
- *           timer.h needs to be available
- * Run:      ./pth_pi_mutex <number of threads> <n>
- *           n is the number of terms of the Maclaurin series to use
- *           n should be evenly divisible by the number of threads
- *
- * Input:    none
- * Output:   The estimate of pi using multiple threads, one thread, and the
- *           value computed by the math library arctan function
- *           Also elapsed times for the multithreaded and singlethreaded
- *           computations.
- *
- * Notes:
- *    1.  The radius of convergence for the series is only 1.  So the
- *        series converges quite slowly.
- *
- * IPP:   Section 4.6 (pp. 168 and ff.)
- */
+
 
 #include <stdio.h>
 #include <stdlib.h>
